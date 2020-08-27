@@ -1,0 +1,31 @@
+pluginManagement {
+    plugins {
+        id 'application'
+        id 'org.jetbrains.kotlin.jvm' version '1.3.72'
+        id 'org.jlleitschuh.gradle.ktlint' version '9.3.0'
+        id 'com.github.johnrengelman.shadow' version '6.0.0'
+    }
+}
+
+rootProject.name = 'arrow-api'
+
+include 'products:domain'
+project(':products:domain').name = 'products-domain'
+include 'products:application'
+project(':products:application').name = 'products-application'
+include 'products:adapter'
+project(':products:adapter').name = 'products-adapter'
+
+include 'core:domain'
+project(':core:domain').name = 'core-domain'
+
+include 'infrastructure:json'
+project(':infrastructure:json').name = 'infrastructure-json'
+include 'infrastructure:http'
+project(':infrastructure:http').name = 'infrastructure-http'
+include 'infrastructure:jdbc'
+project(':infrastructure:jdbc').name = 'infrastructure-jdbc'
+
+include ':main'
+project(':main').name = 'main'
+

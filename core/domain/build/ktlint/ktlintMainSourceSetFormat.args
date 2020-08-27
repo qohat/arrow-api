@@ -1,0 +1,5 @@
+--reporter=plain
+--color
+--reporter=plain,output=/Users/carloscorreacano/Desktop/repos/arrow-api/core/domain/build/reports/ktlint/ktlintMainSourceSetFormat.txt
+-F
+src/main/kotlin/com/arrow/core/domain/products.kt
